@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import { BiRightArrowAlt } from 'react-icons/bi';
 
-import { Header } from './styles';
+import { Header, Skills } from './styles';
+import responsive from '../../assets/responsive.svg';
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,13 @@ const Home: React.FC = () => {
           Projetos <BiRightArrowAlt size={22} />
         </button>
       </Header>
+      <Skills>
+        <h3>Minhas Habilidades</h3>
+        <div>
+          <img src={responsive} />
+          <p>Páginas responsivas</p>
+        </div>
+      </Skills>
     </>
   );
 };

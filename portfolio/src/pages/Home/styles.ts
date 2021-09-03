@@ -8,11 +8,16 @@ export const Header = styled.header`
   margin-top: 64px;
 
   p {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
   }
 
   h3 {
     color: #008b8b;
+    font-size: 22px;
     margin-bottom: 4px;
   }
 
@@ -30,12 +35,47 @@ export const Header = styled.header`
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${shade(0.2, '#008b8b')};
+      background-color: ${shade(0.2, '#008B8B')};
       transform: translateX(2px);
     }
 
     svg {
       margin-left: 8px;
+    }
+  }
+`;
+
+export const Skills = styled.section`
+  /* background-color: #808080; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 64px;
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  div {
+    background-color: #e6e6fa;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px #008b8b;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    max-width: 240px;
+
+    p {
+      color: #008b8b;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    img {
+      color: red;
+      width: 120px;
     }
   }
 `;

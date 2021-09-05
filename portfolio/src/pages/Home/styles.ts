@@ -5,7 +5,7 @@ export const Header = styled.header`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 64px;
+  margin-top: 104px;
 
   p {
     font-size: 20px;
@@ -52,30 +52,81 @@ export const Skills = styled.section`
   align-items: center;
   margin: 64px;
 
-  h3 {
+  h2 {
+    border-bottom: 2px solid #008b8b;
+    margin-bottom: 32px;
+  }
+`;
+
+export const SkillsList = styled.article`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+`;
+
+export const CardFront = styled.div`
+  backface-visibility: hidden;
+  background: #e6e6fa;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #008b8b;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  max-width: 240px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  p {
+    color: #008b8b;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  svg {
     margin-bottom: 16px;
   }
 
-  div {
-    background-color: #e6e6fa;
-    border-radius: 8px;
-    box-shadow: 5px 5px 5px #008b8b;
-    color: #1f1f1f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    max-width: 240px;
+  img {
+    color: red;
+    width: 100px;
+  }
+`;
 
-    p {
-      color: #008b8b;
-      font-size: 18px;
-      font-weight: 600;
-    }
+export const CardContainer = styled.div`
+  /* cursor: pointer; */
+  /* position: absolute; */
+  width: 240px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
 
-    img {
-      color: red;
-      width: 120px;
-    }
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
+
+export const CardBack = styled.div`
+  background: #008b8b;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #e6e6fa;
+  font-weight: 600;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #e6e6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+
+  p {
+    margin: 0 4px;
   }
 `;

@@ -53,8 +53,32 @@ export const Skills = styled.section`
   margin: 64px;
 
   h2 {
-    border-bottom: 2px solid #008b8b;
-    margin-bottom: 32px;
+    color: #dcdcdc;
+  }
+
+  h2:after {
+    content: '';
+    position: absolute;
+    background-color: #008b8b;
+    height: 3px;
+    width: 0;
+    left: 41%;
+    bottom: 245px;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    h2 {
+      color: #fff;
+    }
+    h2:after {
+      width: 240px;
+    }
+  }
+
+  h2 {
+    /* border-bottom: 0 solid #008b8b; */
+    margin-bottom: 64px;
   }
 `;
 

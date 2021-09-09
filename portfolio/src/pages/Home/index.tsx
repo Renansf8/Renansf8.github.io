@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
+import { GiDiamondHard } from 'react-icons/gi';
 
 import { Header, Skills, SkillsList, CardFront, CardBack, CardContainer } from './styles';
 import responsive from '../../assets/responsive.svg';
@@ -27,25 +28,27 @@ const Home: React.FC = () => {
               <p>Desenvolvimento web</p>
             </CardFront>
             <CardBack>
-              <p>Ás páginas web se adaptam aos diferentes tamanhos de tela</p>
+              <p>Construção de interfaces voltadas para a web</p>
             </CardBack>
           </CardContainer>
+
           <CardContainer>
             <CardFront>
-              <img src={responsive} />
+              <GiDiamondHard size={64} />
               <p>Clean code</p>
             </CardFront>
             <CardBack>
-              <p>Ás páginas web se adaptam aos diferentes tamanhos de tela</p>
+              <p>Código limpo para facilitar a leitura e manutenção</p>
             </CardBack>
           </CardContainer>
+
           <CardContainer>
             <CardFront>
               <img src={responsive} />
               <p>Design Responsivo</p>
             </CardFront>
             <CardBack>
-              <p>Ás páginas web se adaptam aos diferentes tamanhos de tela</p>
+              <p>As páginas web se adaptam aos diferentes tamanhos de tela</p>
             </CardBack>
           </CardContainer>
         </SkillsList>

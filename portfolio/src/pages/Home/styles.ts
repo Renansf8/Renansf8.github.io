@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { shade, opacify } from 'polished';
+import { shade } from 'polished';
 
 export const Header = styled.header`
   align-items: center;
@@ -54,7 +54,6 @@ export const Skills = styled.section`
   flex-direction: column;
   margin: 100px 40px 32px 40px;
   padding: 32px 0;
-  opacity: 0.9;
 
   h2 {
     color: #dcdcdc;

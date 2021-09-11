@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     <NavBar>
       <NavContainer>
         <a href="/">Início</a>
-        <a>Sobre</a>
+        <Link to="/sobre">Sobre</Link>
         <Link to="/projetos">Projetos</Link>
       </NavContainer>
       <ContactContainer>

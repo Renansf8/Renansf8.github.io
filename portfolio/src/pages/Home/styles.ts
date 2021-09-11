@@ -120,8 +120,6 @@ export const CardFront = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  /* cursor: pointer; */
-  /* position: absolute; */
   width: 240px;
   height: 200px;
   transform-style: preserve-3d;
@@ -151,5 +149,28 @@ export const CardBack = styled.div`
 
   p {
     margin: 0 4px;
+  }
+`;
+
+export const Tecs = styled.section`
+  align-items: center;
+  background-color: #2b2b2b;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 40px 32px 40px;
+  padding: 32px 0;
+
+  svg {
+    cursor: pointer;
+    margin: 24px 16px 8px 16px;
+  }
+
+  img {
+    cursor: pointer;
+    margin-bottom: 6px;
+    margin-left: 8px;
+    width: 56px;
   }
 `;

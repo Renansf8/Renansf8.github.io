@@ -8,6 +8,7 @@ export const AboutSection = styled.section`
     color: #008b8b;
     font-size: 32px;
     margin-bottom: 16px;
+    margin-top: 64px;
   }
 
   p {

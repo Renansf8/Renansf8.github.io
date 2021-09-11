@@ -47,12 +47,18 @@ export const Header = styled.header`
 
 export const Skills = styled.section`
   align-items: center;
+  background-color: #2b2b2b;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px #3d3d3d;
   display: flex;
   flex-direction: column;
-  margin: 64px;
+  margin: 100px 40px 32px 40px;
+  padding: 32px 0;
+  opacity: 0.9;
 
   h2 {
     color: #dcdcdc;
+    margin-bottom: 40px;
   }
 
   h2:after {
@@ -62,7 +68,7 @@ export const Skills = styled.section`
     height: 3px;
     width: 0;
     left: 41%;
-    bottom: 245px;
+    bottom: 175px;
     transition: 0.3s;
   }
 
@@ -73,11 +79,6 @@ export const Skills = styled.section`
     h2:after {
       width: 240px;
     }
-  }
-
-  h2 {
-    /* border-bottom: 0 solid #008b8b; */
-    margin-bottom: 64px;
   }
 `;
 

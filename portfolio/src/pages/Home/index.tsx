@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
 import { GiDiamondHard } from 'react-icons/gi';
@@ -53,6 +54,7 @@ const Home: React.FC = () => {
           </CardContainer>
         </SkillsList>
       </Skills>
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
+import { shade, opacify } from 'polished';
 
 export const Header = styled.header`
   align-items: center;
@@ -46,10 +46,9 @@ export const Header = styled.header`
 `;
 
 export const Skills = styled.section`
-  /* background-color: #808080; */
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 64px;
 
   h2 {

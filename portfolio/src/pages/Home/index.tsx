@@ -47,7 +47,7 @@ const Home: React.FC = () => {
         <p>Olá, eu sou </p>
         <h1>Renan Santiago Ferreira</h1>
         <h3>Desenvolvedor front end</h3>
-        <Link to="/projetos">
+        <Link data-testid="project-link" to="/projetos">
           <button type="button">
             Projetos <BiRightArrowAlt size={22} />
           </button>

@@ -1,10 +1,30 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Tooltip from '../../components/Tooltip';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
 import { GiDiamondHard } from 'react-icons/gi';
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
-import { SiJavascript, SiReact, SiRedux, SiJest } from 'react-icons/si';
+import {
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiJest,
+  SiGit,
+  SiTypescript,
+} from 'react-icons/si';
+import {
+  HTML,
+  CSS,
+  JAVASCRIPT,
+  REACT,
+  REDUX,
+  JEST,
+  RTL,
+  GIT,
+  TYPESCRIPT,
+} from '../../helpers/Tecs';
 
 import {
   Header,
@@ -16,6 +36,8 @@ import {
   Tecs,
 } from './styles';
 import responsive from '../../assets/responsive.svg';
+import { Link } from 'react-router-dom';
+import { TooltipTarget } from '../../components/Tooltip/styles';
 
 const Home: React.FC = () => {
   return (
@@ -25,9 +47,11 @@ const Home: React.FC = () => {
         <p>Olá, eu sou </p>
         <h1>Renan Santiago Ferreira</h1>
         <h3>Desenvolvedor front end</h3>
-        <button type="button">
-          Projetos <BiRightArrowAlt size={22} />
-        </button>
+        <Link to="/projetos">
+          <button type="button">
+            Projetos <BiRightArrowAlt size={22} />
+          </button>
+        </Link>
       </Header>
       <Skills>
         <h2>Minhas Habilidades</h2>
@@ -66,15 +90,54 @@ const Home: React.FC = () => {
       <Tecs>
         <h2>Tecnologias</h2>
         <div>
-          <ImHtmlFive size={48} color="red" />
-          <ImCss3 size={48} color="blue" />
-          <SiJavascript size={48} color="yellow" />
-          <SiReact size={48} color="cyan" />
-          <SiRedux size={48} color="purple" />
-          <SiJest size={48} color="brown" />
-          <img src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67" />
+          <Tooltip language="HTML: " text={HTML}>
+            <TooltipTarget>
+              <ImHtmlFive size={48} color="red" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="CSS: " text={CSS}>
+            <TooltipTarget>
+              <ImCss3 size={48} color="blue" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="Javascript: " text={JAVASCRIPT}>
+            <TooltipTarget>
+              <SiJavascript size={48} color="yellow" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="Typescript: " text={TYPESCRIPT}>
+            <TooltipTarget>
+              <SiTypescript size={48} color="blue" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="React: " text={REACT}>
+            <TooltipTarget>
+              <SiReact size={48} color="cyan" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="Redux: " text={REDUX}>
+            <TooltipTarget>
+              <SiRedux size={48} color="purple" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="Jest: " text={JEST}>
+            <TooltipTarget>
+              <SiJest size={48} color="brown" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="RTL: " text={RTL}>
+            <TooltipTarget>
+              <img src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip language="Git: " text={GIT}>
+            <TooltipTarget>
+              <SiGit size={48} color="orange" />
+            </TooltipTarget>
+          </Tooltip>
         </div>
       </Tecs>
+      <Footer />
     </>
   );
 };

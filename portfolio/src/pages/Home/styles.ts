@@ -120,6 +120,7 @@ export const CardFront = styled.div`
 `;
 
 export const CardContainer = styled.div`
+  cursor: pointer;
   width: 240px;
   height: 200px;
   transform-style: preserve-3d;

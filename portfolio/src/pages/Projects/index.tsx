@@ -1,10 +1,22 @@
 import React from 'react';
 import NavBar from '../../components/Navbar';
-import todoImg from '../../assets/todo-list.png';
+import { projectList } from '../../helpers/Project';
 
-import { Header, ProjectsList, ProjectCard } from './styles';
+import { ImHtmlFive, ImCss3 } from 'react-icons/im';
+import {
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiJest,
+  SiGit,
+  SiTypescript,
+} from 'react-icons/si';
+
+import { Header, ProjectsList, ProjectCard, Tecs } from './styles';
 
 const Projects: React.FC = () => {
+  const { toDo, trybeWallet, uploadProject } = projectList;
+
   return (
     <>
       <NavBar />
@@ -13,34 +25,77 @@ const Projects: React.FC = () => {
       </Header>
       <ProjectsList>
         <ProjectCard>
-          <h3>Todo-list</h3>
-          <p>
-            Lista de tarefas com varias funções para uma completa organização das tarefas
-            que irão ser feitas ao longo dos dias. Feita com HTML, CSS e Javascript, bem
-            como o uso da web storage para armazenar os dados.
-          </p>
-          <img src={todoImg} />
-          <button>Ver detalhes do projeto</button>
+          <h3>{toDo.title}</h3>
+          <p>{toDo.description}</p>
+          <Tecs>
+            <p>Tecnologias utilizadas:</p>
+            <div>
+              <ImHtmlFive color="red" size={24} />
+              <ImCss3 color="blue" size={24} />
+              <SiJavascript color="yellow" size={24} />
+            </div>
+          </Tecs>
+          <img src={toDo.thumb} />
+          <div>
+            <a
+              href="https://github.com/Renansf8/todo-list"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Ir para o repositório</button>
+            </a>
+            <button>Ir para o site</button>
+          </div>
         </ProjectCard>
         <ProjectCard>
-          <h3>Todo-list</h3>
-          <p>
-            Lista de tarefas com varias funções para uma completa organização das tarefas
-            que irão ser feitas ao longo dos dias. Feita com HTML, CSS e Javascript, bem
-            como o uso da web storage para armazenar os dados.
-          </p>
-          <img src={todoImg} />
-          <button>Ver detalhes do projeto</button>
+          <h3>{trybeWallet.title}</h3>
+          <p>{trybeWallet.description}</p>
+          <Tecs>
+            <p>Tecnologias utilizadas:</p>
+            <div>
+              <ImHtmlFive color="red" size={24} />
+              <ImCss3 color="blue" size={24} />
+              <SiJavascript color="yellow" size={24} />
+              <SiReact color="cyan" size={24} />
+              <SiRedux color="purple" size={24} />
+              <img src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67" />
+            </div>
+          </Tecs>
+          <img src={trybeWallet.thumb} />
+          <div>
+            <a
+              href="https://github.com/Renansf8/Trybewallet"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Ir para o repositório</button>
+            </a>
+            <button>Ir para o site</button>
+          </div>
         </ProjectCard>
         <ProjectCard>
-          <h3>Todo-list</h3>
-          <p>
-            Lista de tarefas com varias funções para uma completa organização das tarefas
-            que irão ser feitas ao longo dos dias. Feita com HTML, CSS e Javascript, bem
-            como o uso da web storage para armazenar os dados.
-          </p>
-          <img src={todoImg} />
-          <button>Ver detalhes do projeto</button>
+          <h3>{uploadProject.title}</h3>
+          <p>{uploadProject.description}</p>
+          <Tecs>
+            <p>Tecnologias utilizadas:</p>
+            <div>
+              <ImHtmlFive color="red" size={24} />
+              <ImCss3 color="blue" size={24} />
+              <SiJavascript color="yellow" size={24} />
+              <SiReact color="cyan" size={24} />
+            </div>
+          </Tecs>
+          <img src={uploadProject.thumb} />
+          <div>
+            <a
+              href="https://github.com/Renansf8/uploadProject-frontend"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Ir para o repositório</button>
+            </a>
+            <button>Ir para o site</button>
+          </div>
         </ProjectCard>
       </ProjectsList>
     </>

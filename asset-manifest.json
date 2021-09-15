@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.446f20f5.chunk.js",
-    "main.js.map": "/static/js/main.446f20f5.chunk.js.map",
+    "main.js": "/static/js/main.0c7d7e9a.chunk.js",
+    "main.js.map": "/static/js/main.0c7d7e9a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
-    "static/js/2.b89e4c59.chunk.js": "/static/js/2.b89e4c59.chunk.js",
-    "static/js/2.b89e4c59.chunk.js.map": "/static/js/2.b89e4c59.chunk.js.map",
+    "static/js/2.a8edefda.chunk.js": "/static/js/2.a8edefda.chunk.js",
+    "static/js/2.a8edefda.chunk.js.map": "/static/js/2.a8edefda.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.b89e4c59.chunk.js.LICENSE.txt": "/static/js/2.b89e4c59.chunk.js.LICENSE.txt",
+    "static/js/2.a8edefda.chunk.js.LICENSE.txt": "/static/js/2.a8edefda.chunk.js.LICENSE.txt",
     "static/media/responsive.c5512751.svg": "/static/media/responsive.c5512751.svg",
-    "static/media/todo-list.2b9bae30.png": "/static/media/todo-list.2b9bae30.png"
+    "static/media/todo-list.2b9bae30.png": "/static/media/todo-list.2b9bae30.png",
+    "static/media/trybewallet.4f877b38.png": "/static/media/trybewallet.4f877b38.png",
+    "static/media/uploadproject.e4c62a7a.png": "/static/media/uploadproject.e4c62a7a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
-    "static/js/2.b89e4c59.chunk.js",
-    "static/js/main.446f20f5.chunk.js"
+    "static/js/2.a8edefda.chunk.js",
+    "static/js/main.0c7d7e9a.chunk.js"
   ]
 }

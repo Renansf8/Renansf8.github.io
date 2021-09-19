@@ -8,8 +8,8 @@ const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Route exact path="/" component={Home} />
-      <Route path="/projetos" component={Projects} />
-      <Route path="/sobre" component={About} />
+      <Route exact path="/projetos" component={Projects} />
+      <Route exact path="/sobre" component={About} />
     </BrowserRouter>
   );
 };

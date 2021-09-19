@@ -63,7 +63,13 @@ const Projects: React.FC = () => {
             >
               <button>Ir para o repositório</button>
             </a>
-            <button>Ir para o site</button>
+            <a
+              href="https://renansf8.github.io/trybewallet/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Ir para o site</button>
+            </a>
           </div>
         </ProjectCard>
         <ProjectCard>
@@ -111,7 +117,11 @@ const Projects: React.FC = () => {
             >
               <button>Ir para o repositório</button>
             </a>
-            <a href="https://renansf8.github.io/gitcollection">
+            <a
+              href="https://renansf8.github.io/gitcollection"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button>Ir para o site</button>
             </a>
           </div>

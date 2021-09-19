@@ -3,19 +3,12 @@ import NavBar from '../../components/Navbar';
 import { projectList } from '../../helpers/Project';
 
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
-import {
-  SiJavascript,
-  SiReact,
-  SiRedux,
-  SiJest,
-  SiGit,
-  SiTypescript,
-} from 'react-icons/si';
+import { SiJavascript, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 
 import { Header, ProjectsList, ProjectCard, Tecs } from './styles';
 
 const Projects: React.FC = () => {
-  const { toDo, trybeWallet, uploadProject } = projectList;
+  const { toDo, trybeWallet, uploadProject, gitCollection } = projectList;
 
   return (
     <>
@@ -95,6 +88,32 @@ const Projects: React.FC = () => {
               <button>Ir para o repositório</button>
             </a>
             <button>Ir para o site</button>
+          </div>
+        </ProjectCard>
+        <ProjectCard>
+          <h3>{gitCollection.title}</h3>
+          <p>{gitCollection.description}</p>
+          <Tecs>
+            <p>Tecnologias utilizadas:</p>
+            <div>
+              <ImHtmlFive color="red" size={24} />
+              <ImCss3 color="blue" size={24} />
+              <SiTypescript color="blue" size={24} />
+              <SiReact color="cyan" size={24} />
+            </div>
+          </Tecs>
+          <img src={gitCollection.thumb} />
+          <div>
+            <a
+              href="https://github.com/Renansf8/gitcollection"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Ir para o repositório</button>
+            </a>
+            <a href="https://renansf8.github.io/gitcollection">
+              <button>Ir para o site</button>
+            </a>
           </div>
         </ProjectCard>
       </ProjectsList>

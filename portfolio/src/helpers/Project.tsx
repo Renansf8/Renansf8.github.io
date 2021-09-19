@@ -1,6 +1,7 @@
 import uploadImg from '../assets/uploadproject.png';
 import trybewalletImg from '../assets/trybewallet.png';
 import todoImg from '../assets/todo-list.png';
+import gitCollectionImg from '../assets/gitCollection.png';
 
 export const projectList = {
   toDo: {
@@ -20,5 +21,10 @@ export const projectList = {
     description:
       'Projeto de upload de arquivos com dropzone. Contém tooltips e uma barra de progresso para melhorar a usabilidade.',
     thumb: uploadImg,
+  },
+  gitCollection: {
+    title: 'Git Collection',
+    description: 'Um app para explorar os repositório existentes do github',
+    thumb: gitCollectionImg,
   },
 };

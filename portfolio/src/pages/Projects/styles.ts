@@ -25,7 +25,7 @@ export const ProjectsList = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  max-width: 540px;
+  width: 540px;
   background-color: #2b2b2b;
   margin: 16px 0;
   padding: 8px;

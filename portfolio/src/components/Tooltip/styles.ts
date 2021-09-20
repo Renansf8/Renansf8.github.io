@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface ContainerProps {
+  position: string;
+}
 
 export const TooltipWrapper = styled.div`
   position: relative;
@@ -17,7 +21,7 @@ export const TooltipTarget = styled.div`
   }
 `;
 
-export const CenterContainer = styled.div`
+export const CenterContainer = styled.div<ContainerProps>`
   position: absolute;
   width: 240px;
   margin-left: -100px;
@@ -28,9 +32,24 @@ export const CenterContainer = styled.div`
   bottom: calc(100% + 1px);
   pointer-events: none;
   line-height: 18px;
+
+  ${({ position }) => {
+    switch (position) {
+      case 'bottom':
+        return css`
+          top: calc(100% + 20px);
+          left: 10%;
+          padding: 0;
+        `;
+      default:
+        return css`
+          bottom: calc(100% + 5px);
+        `;
+    }
+  }}
 `;
 
-export const TooltipBox = styled.span`
+export const TooltipBox = styled.span<ContainerProps>`
   background-color: #e6e6fa;
   border-radius: 5px;
   color: #1f1f1f;
@@ -58,4 +77,21 @@ export const TooltipBox = styled.span`
     left: calc(50% - 4.5px);
     top: 100%;
   }
+
+  ${({ position }) => {
+    switch (position) {
+      case 'bottom':
+        return css`
+          &:after {
+            border-color: transparent transparent #fff transparent;
+            top: unset;
+            width: 1px;
+            bottom: 100%;
+            left: calc(50% - 5px);
+          }
+        `;
+      default:
+        return css``;
+    }
+  }}
 `;

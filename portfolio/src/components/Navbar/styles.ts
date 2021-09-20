@@ -44,4 +44,13 @@ export const ContactContainer = styled.div`
   .github:hover {
     color: gray;
   }
+
+  .whatsapp {
+    margin-top: -5px;
+    margin-left: 4px;
+  }
+
+  .whatsapp:hover {
+    color: #00d600;
+  }
 `;

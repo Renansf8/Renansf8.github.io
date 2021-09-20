@@ -8,7 +8,7 @@ import { SiJavascript, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 import { Header, ProjectsList, ProjectCard, Tecs } from './styles';
 
 const Projects: React.FC = () => {
-  const { toDo, trybeWallet, uploadProject, gitCollection } = projectList;
+  const { toDo, trybeWallet, gitCollection } = projectList;
 
   return (
     <>
@@ -37,7 +37,6 @@ const Projects: React.FC = () => {
             >
               <button>Ir para o repositório</button>
             </a>
-            <button>Ir para o site</button>
           </div>
         </ProjectCard>
         <ProjectCard>
@@ -70,30 +69,6 @@ const Projects: React.FC = () => {
             >
               <button>Ir para o site</button>
             </a>
-          </div>
-        </ProjectCard>
-        <ProjectCard>
-          <h3>{uploadProject.title}</h3>
-          <p>{uploadProject.description}</p>
-          <Tecs>
-            <p>Tecnologias utilizadas:</p>
-            <div>
-              <ImHtmlFive color="red" size={24} />
-              <ImCss3 color="blue" size={24} />
-              <SiJavascript color="yellow" size={24} />
-              <SiReact color="cyan" size={24} />
-            </div>
-          </Tecs>
-          <img src={uploadProject.thumb} />
-          <div>
-            <a
-              href="https://github.com/Renansf8/uploadProject-frontend"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button>Ir para o repositório</button>
-            </a>
-            <button>Ir para o site</button>
           </div>
         </ProjectCard>
         <ProjectCard>

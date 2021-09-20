@@ -4,9 +4,10 @@ import { TooltipWrapper, TooltipTarget, CenterContainer, TooltipBox } from './st
 interface TooltipProps {
   text: string;
   language?: string;
+  position: string;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ text, children, language }) => {
+const Tooltip: React.FC<TooltipProps> = ({ text, children, language, position }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -19,8 +20,8 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children, language }) => {
           {children}
         </TooltipTarget>
         {isHovered && (
-          <CenterContainer>
-            <TooltipBox>
+          <CenterContainer position={position}>
+            <TooltipBox position={position}>
               <span>{language}</span>
               {text}
             </TooltipBox>

@@ -90,47 +90,47 @@ const Home: React.FC = () => {
       <Tecs>
         <h2>Tecnologias</h2>
         <div>
-          <Tooltip language="HTML: " text={HTML}>
+          <Tooltip position="" language="HTML: " text={HTML}>
             <TooltipTarget>
               <ImHtmlFive size={48} color="red" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="CSS: " text={CSS}>
+          <Tooltip position="" language="CSS: " text={CSS}>
             <TooltipTarget>
               <ImCss3 size={48} color="blue" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="Javascript: " text={JAVASCRIPT}>
+          <Tooltip position="" language="Javascript: " text={JAVASCRIPT}>
             <TooltipTarget>
               <SiJavascript size={48} color="yellow" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="Typescript: " text={TYPESCRIPT}>
+          <Tooltip position="" language="Typescript: " text={TYPESCRIPT}>
             <TooltipTarget>
               <SiTypescript size={48} color="blue" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="React: " text={REACT}>
+          <Tooltip position="" language="React: " text={REACT}>
             <TooltipTarget>
               <SiReact size={48} color="cyan" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="Redux: " text={REDUX}>
+          <Tooltip position="" language="Redux: " text={REDUX}>
             <TooltipTarget>
               <SiRedux size={48} color="purple" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="Jest: " text={JEST}>
+          <Tooltip position="" language="Jest: " text={JEST}>
             <TooltipTarget>
               <SiJest size={48} color="brown" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="RTL: " text={RTL}>
+          <Tooltip position="" language="RTL: " text={RTL}>
             <TooltipTarget>
               <img src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67" />
             </TooltipTarget>
           </Tooltip>
-          <Tooltip language="Git: " text={GIT}>
+          <Tooltip position="" language="Git: " text={GIT}>
             <TooltipTarget>
               <SiGit size={48} color="orange" />
             </TooltipTarget>

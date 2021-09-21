@@ -67,7 +67,7 @@ export const Skills = styled.section`
     height: 3px;
     width: 0;
     left: 41%;
-    bottom: 175px;
+    bottom: 170px;
     transition: 0.3s;
   }
 

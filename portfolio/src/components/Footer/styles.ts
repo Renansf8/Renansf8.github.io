@@ -5,4 +5,8 @@ export const Footer = styled.footer`
   background-color: #1c1c1c;
   justify-content: center;
   padding: 8px;
+
+  strong {
+    margin-left: 4px;
+  }
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Tooltip from '../../components/Tooltip';
 import { BiRightArrowAlt } from 'react-icons/bi';
@@ -36,22 +35,25 @@ import {
   Tecs,
 } from './styles';
 import responsive from '../../assets/responsive.svg';
-import { Link } from 'react-router-dom';
 import { TooltipTarget } from '../../components/Tooltip/styles';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Navbar />
       <Header>
         <p>Olá, eu sou </p>
         <h1>Renan Santiago Ferreira</h1>
         <h3>Desenvolvedor front end</h3>
-        <Link data-testid="project-link" to="/projetos">
+        <a
+          data-testid="project-link"
+          href="https://github.com/Renansf8"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button type="button">
-            Projetos <BiRightArrowAlt size={22} />
+            Meu Github <BiRightArrowAlt size={22} />
           </button>
-        </Link>
+        </a>
       </Header>
       <Skills>
         <h2>Minhas Habilidades</h2>

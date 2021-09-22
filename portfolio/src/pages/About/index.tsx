@@ -1,11 +1,10 @@
 import React from 'react';
-import NavBar from '../../components/Navbar';
 import { AboutSection } from './styles';
+import { BiRightArrowAlt } from 'react-icons/bi';
 
 const About: React.FC = () => {
   return (
     <>
-      <NavBar />
       <AboutSection>
         <article>
           <h1>Renan Santiago Ferreira</h1>
@@ -25,6 +24,15 @@ const About: React.FC = () => {
             aprimorar ainda mais meus conhecimentos nas tecnologias que já conheço, assim
             como aprender novas.
           </p>
+          <a
+            href="https://www.linkedin.com/in/renanferreira8/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button type="button">
+              Meu Linkedin <BiRightArrowAlt size={22} />
+            </button>
+          </a>
         </article>
       </AboutSection>
     </>

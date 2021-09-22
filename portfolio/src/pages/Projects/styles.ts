@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Header = styled.header`
   display: flex;
@@ -26,7 +25,7 @@ export const ProjectsList = styled.div`
 
 export const ProjectCard = styled.div`
   width: 540px;
-  background-color: #2b2b2b;
+  background-color: ${props => props.theme.colors.secundary};
   margin: 16px 0;
   padding: 8px;
   display: flex;
@@ -35,8 +34,7 @@ export const ProjectCard = styled.div`
   border-radius: 6px;
 
   h3 {
-    color: #008b8b;
-    /* margin-left: 120px; */
+    color: ${props => props.theme.colors.primary};
   }
 
   p {
@@ -53,7 +51,7 @@ export const ProjectCard = styled.div`
 
   button {
     align-items: center;
-    background-color: #008b8b;
+    background-color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 6px;
     color: #fff;
@@ -65,7 +63,6 @@ export const ProjectCard = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${shade(0.2, '#008B8B')};
       transform: translateY(-2px);
     }
   }

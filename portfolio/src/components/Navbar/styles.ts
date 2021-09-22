@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const NavBar = styled.nav`
+  background-color: ${props => props.theme.colors.background};
   display: flex;
-  justify-content: center;
-  margin-left: 420px;
+  justify-content: space-around;
   padding: 8px;
+  padding-left: 480px;
 `;
 
 export const NavContainer = styled.div`
@@ -15,7 +16,7 @@ export const NavContainer = styled.div`
   }
 
   a:hover {
-    color: #008b8b;
+    color: ${props => props.theme.colors.primary};
   }
 `;
 

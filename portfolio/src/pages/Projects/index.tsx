@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../../components/Navbar';
 import { projectList } from '../../helpers/Project';
 
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
@@ -12,7 +11,6 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <NavBar />
       <Header>
         <h1>Meus Projetos</h1>
       </Header>

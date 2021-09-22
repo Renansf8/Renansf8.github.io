@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Header = styled.header`
   align-items: center;
@@ -16,13 +15,13 @@ export const Header = styled.header`
   }
 
   h3 {
-    color: #008b8b;
+    color: ${props => props.theme.colors.primary};
     font-size: 22px;
     margin-bottom: 4px;
   }
 
   button {
-    background-color: #008b8b;
+    background-color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 6px;
     color: #fff;
@@ -35,7 +34,7 @@ export const Header = styled.header`
     transition: all 0.2s;
 
     &:hover {
-      background-color: ${shade(0.2, '#008B8B')};
+      background-color: ${props => props.theme.colors.hover};
       transform: translateX(2px);
     }
 
@@ -47,33 +46,33 @@ export const Header = styled.header`
 
 export const Skills = styled.section`
   align-items: center;
-  background-color: #2b2b2b;
+  background-color: ${props => props.theme.colors.secundary};
   border-radius: 16px;
-  box-shadow: 4px 4px 4px #3d3d3d;
+  box-shadow: 4px 4px 4px ${props => props.theme.colors.shadow};
   display: flex;
   flex-direction: column;
   margin: 100px 40px 32px 40px;
   padding: 32px 0;
 
   h2 {
-    color: #dcdcdc;
+    color: ${props => props.theme.colors.text};
     margin-bottom: 40px;
   }
 
   h2:after {
     content: '';
     position: absolute;
-    background-color: #008b8b;
+    background-color: ${props => props.theme.colors.primary};
     height: 3px;
     width: 0;
     left: 41%;
-    bottom: 175px;
+    bottom: 170px;
     transition: 0.3s;
   }
 
   &:hover {
     h2 {
-      color: #fff;
+      color: ${props => props.theme.colors.text};
     }
     h2:after {
       width: 240px;
@@ -89,9 +88,9 @@ export const SkillsList = styled.article`
 
 export const CardFront = styled.div`
   backface-visibility: hidden;
-  background: #e6e6fa;
+  background: ${props => props.theme.colors.card};
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #008b8b;
+  box-shadow: 5px 5px 5px ${props => props.theme.colors.primary};
   color: #1f1f1f;
   display: flex;
   flex-direction: column;
@@ -104,7 +103,7 @@ export const CardFront = styled.div`
   height: 100%;
 
   p {
-    color: #008b8b;
+    color: ${props => props.theme.colors.primary};
     font-size: 18px;
     font-weight: 600;
   }
@@ -132,16 +131,16 @@ export const CardContainer = styled.div`
 `;
 
 export const CardBack = styled.div`
-  background: #008b8b;
+  background: ${props => props.theme.colors.primary};
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  color: #e6e6fa;
+  color: ${props => props.theme.colors.secundary};
   font-weight: 600;
   transform: rotateY(180deg);
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #e6e6fa;
+  box-shadow: 5px 5px 5px ${props => props.theme.colors.card};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,9 +154,9 @@ export const CardBack = styled.div`
 
 export const Tecs = styled.section`
   align-items: center;
-  background-color: #2b2b2b;
+  background-color: ${props => props.theme.colors.secundary};
   border-radius: 16px;
-  box-shadow: 4px 4px 4px #3d3d3d;
+  box-shadow: 4px 4px 4px ${props => props.theme.colors.shadow};
   display: flex;
   flex-direction: column;
   margin: 100px 40px 32px 40px;

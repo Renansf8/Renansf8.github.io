@@ -3,15 +3,16 @@ import styled from 'styled-components';
 export const NavBar = styled.nav`
   background-color: ${props => props.theme.colors.background};
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 8px;
-  padding-left: 480px;
+  padding-left: 120px;
+  padding-right: 40px;
 `;
 
 export const NavContainer = styled.div`
   a {
     font-size: 22px;
-    margin-left: 40px;
+    margin-left: 60px;
     transition: all 0.2s;
   }
 
@@ -22,7 +23,7 @@ export const NavContainer = styled.div`
 
 export const ContactContainer = styled.div`
   display: flex;
-  margin-left: 260px;
+  margin-left: 320px;
 
   p {
     font-size: 22px;

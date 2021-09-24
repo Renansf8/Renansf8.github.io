@@ -136,7 +136,7 @@ export const CardBack = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.background};
   font-weight: 600;
   transform: rotateY(180deg);
   border-radius: 8px;

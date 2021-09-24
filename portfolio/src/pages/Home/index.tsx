@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../../components/Footer';
 import Tooltip from '../../components/Tooltip';
 import { BiRightArrowAlt } from 'react-icons/bi';
-import { RiCodeSSlashFill } from 'react-icons/ri';
+import { RiCodeSSlashFill, RiComputerLine } from 'react-icons/ri';
 import { GiDiamondHard } from 'react-icons/gi';
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
 import {
@@ -34,7 +34,7 @@ import {
   CardContainer,
   Tecs,
 } from './styles';
-import responsive from '../../assets/responsive.svg';
+// import responsive from '../../assets/responsive.svg';
 import { TooltipTarget } from '../../components/Tooltip/styles';
 
 const Home: React.FC = () => {
@@ -80,7 +80,8 @@ const Home: React.FC = () => {
 
           <CardContainer>
             <CardFront>
-              <img src={responsive} />
+              {/* <img src={responsive} /> */}
+              <RiComputerLine size={64} />
               <p>Design Responsivo</p>
             </CardFront>
             <CardBack>

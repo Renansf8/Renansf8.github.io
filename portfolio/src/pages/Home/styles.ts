@@ -110,10 +110,10 @@ export const CardFront = styled.div`
 
   svg {
     margin-bottom: 16px;
+    color: ${props => props.theme.colors.background};
   }
 
   img {
-    color: red;
     width: 100px;
   }
 `;

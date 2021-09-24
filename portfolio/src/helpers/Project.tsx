@@ -7,7 +7,7 @@ export const projectList = {
   toDo: {
     title: 'Todo-list',
     description:
-      'Lista de tarefas com varias funções para uma completa organização das tarefas que irão ser feitas ao longo dos dias. Feita com HTML, CSS e Javascript, bem como o uso da web storage para armazenar os dados.',
+      'Lista de tarefas com várias funções para uma completa organização das tarefas que irão ser feitas ao longo dos dias. Feita com HTML, CSS e Javascript, bem como o uso da web storage para armazenar os dados.',
     thumb: todoImg,
   },
   trybeWallet: {

@@ -58,7 +58,7 @@ export const Skills = styled.section`
     color: ${props => props.theme.colors.text};
     margin-bottom: 40px;
   }
-
+  /*
   h2:after {
     content: '';
     position: absolute;
@@ -68,7 +68,7 @@ export const Skills = styled.section`
     left: 41%;
     bottom: 170px;
     transition: 0.3s;
-  }
+  } */
 
   &:hover {
     h2 {

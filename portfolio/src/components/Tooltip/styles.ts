@@ -32,6 +32,7 @@ export const CenterContainer = styled.div<ContainerProps>`
   bottom: calc(100% + 1px);
   pointer-events: none;
   line-height: 18px;
+  font-family: 'Roboto Slab', serif;
 
   ${({ position }) => {
     switch (position) {

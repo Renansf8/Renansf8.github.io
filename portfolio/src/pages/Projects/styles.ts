@@ -4,6 +4,12 @@ export const Header = styled.header`
   display: flex;
   justify-content: center;
   margin-top: 64px;
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const ProjectsList = styled.div`
@@ -72,6 +78,25 @@ export const ProjectCard = styled.div`
   div {
     display: flex;
   }
+
+  @media screen and (max-width: 500px) {
+    max-width: 360px;
+
+    p {
+      font-size: 12px;
+    }
+
+    img {
+      width: 320px;
+      height: 160px;
+    }
+
+    button {
+      margin: 10px 6px;
+      padding: 6px 14px 6px 14px;
+      font-size: 12px;
+    }
+  }
 `;
 
 export const Tecs = styled.div`
@@ -93,5 +118,15 @@ export const Tecs = styled.div`
     margin-left: 4px;
     height: 24px;
     width: 24px;
+  }
+
+  @media screen and (max-width: 500px) {
+    p {
+      font-size: 14px;
+    }
+
+    svg {
+      width: 20px;
+    }
   }
 `;

@@ -43,7 +43,7 @@ export const Header = styled.header`
     }
   }
 
-  @media screen and (max-width: 5 00px) {
+  @media screen and (max-width: 500px) {
     p {
       font-size: 14px;
     }

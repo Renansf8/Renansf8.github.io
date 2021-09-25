@@ -1,5 +1,6 @@
 import React from 'react';
 import { projectList } from '../../helpers/Project';
+import Footer from '../../components/Footer';
 
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
 import { SiJavascript, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
@@ -100,6 +101,7 @@ const Projects: React.FC = () => {
           </div>
         </ProjectCard>
       </ProjectsList>
+      <Footer />
     </>
   );
 };

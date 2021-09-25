@@ -1,6 +1,7 @@
 import React from 'react';
 import { AboutSection } from './styles';
 import { BiRightArrowAlt } from 'react-icons/bi';
+import Footer from '../../components/Footer';
 
 const About: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const About: React.FC = () => {
           </a>
         </article>
       </AboutSection>
+      <Footer />
     </>
   );
 };

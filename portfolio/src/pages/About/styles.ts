@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const AboutSection = styled.section`
   font-size: 20px;
   margin: 40px 280px;
+  height: 100vh;
 
   h1 {
     color: ${props => props.theme.colors.primary};

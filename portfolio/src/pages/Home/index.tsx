@@ -95,7 +95,7 @@ const Home: React.FC = () => {
         <div>
           <Tooltip position="" language="HTML: " text={HTML}>
             <TooltipTarget>
-              <ImHtmlFive size={48} color="red" />
+              <ImHtmlFive size={48} color="#e65200" />
             </TooltipTarget>
           </Tooltip>
           <Tooltip position="" language="CSS: " text={CSS}>
@@ -105,12 +105,12 @@ const Home: React.FC = () => {
           </Tooltip>
           <Tooltip position="" language="Javascript: " text={JAVASCRIPT}>
             <TooltipTarget>
-              <SiJavascript size={48} color="yellow" />
+              <SiJavascript size={48} color="#dbce00" />
             </TooltipTarget>
           </Tooltip>
           <Tooltip position="" language="Typescript: " text={TYPESCRIPT}>
             <TooltipTarget>
-              <SiTypescript size={48} color="blue" />
+              <SiTypescript size={48} color="#007ddb" />
             </TooltipTarget>
           </Tooltip>
           <Tooltip position="" language="React: " text={REACT}>

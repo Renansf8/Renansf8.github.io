@@ -95,4 +95,9 @@ export const TooltipBox = styled.span<ContainerProps>`
         return css``;
     }
   }}
+
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
+    width: 160px;
+  }
 `;

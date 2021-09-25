@@ -10,4 +10,9 @@ export const Footer = styled.footer`
   strong {
     margin-left: 4px;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 9px;
+    text-align: justify;
+  }
 `;

@@ -42,6 +42,22 @@ export const Header = styled.header`
       margin-left: 8px;
     }
   }
+
+  @media screen and (max-width: 5 00px) {
+    p {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h3 {
+      color: ${props => props.theme.colors.primary};
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+  }
 `;
 
 export const Skills = styled.section`
@@ -78,12 +94,30 @@ export const Skills = styled.section`
       width: 240px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const SkillsList = styled.article`
   display: flex;
   justify-content: space-around;
   width: 100%;
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const CardFront = styled.div`
@@ -127,6 +161,14 @@ export const CardContainer = styled.div`
 
   &:hover {
     transform: rotateY(180deg);
+  }
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    margin: 12px 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 12px 0;
   }
 `;
 
@@ -172,5 +214,21 @@ export const Tecs = styled.section`
     margin-bottom: 6px;
     margin-left: 8px;
     width: 56px;
+  }
+
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 20px;
+    }
+
+    svg {
+      width: 40px;
+      margin: 24px 16px 8px 24px;
+    }
+
+    img {
+      width: 44px;
+      margin: 0 16px 6px 22px;
+    }
   }
 `;

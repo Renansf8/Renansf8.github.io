@@ -15,6 +15,7 @@ export const ProjectsList = styled.div`
   h3 {
     text-align: center;
     margin-top: 16px;
+    font-size: 22px;
   }
 
   p {
@@ -27,11 +28,12 @@ export const ProjectCard = styled.div`
   width: 540px;
   background-color: ${props => props.theme.colors.secundary};
   margin: 16px 0;
-  padding: 8px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 6px;
+  font-size: 14px;
 
   h3 {
     color: ${props => props.theme.colors.primary};

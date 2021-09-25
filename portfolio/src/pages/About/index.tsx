@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <article>
           <h1>Renan Santiago Ferreira</h1>
           <p>
-            De Belém do Pará, tenho 26 anos, apaixoando por tecnologia. Formado e pós
+            De Belém do Pará, tenho 26 anos, apaixonado por tecnologia. Formado e pós
             graduado em Engenharia Civil.
           </p>
           <p>

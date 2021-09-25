@@ -40,4 +40,21 @@ export const AboutSection = styled.section`
       margin-left: 8px;
     }
   }
+
+  @media screen and (max-width: 1000px) and (min-width: 460px) {
+    margin: 40px 20px;
+  }
+
+  @media screen and (max-width: 460px) {
+    margin: 40px 20px;
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `;

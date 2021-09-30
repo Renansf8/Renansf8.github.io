@@ -34,7 +34,6 @@ import {
   CardContainer,
   Tecs,
 } from './styles';
-// import responsive from '../../assets/responsive.svg';
 import { TooltipTarget } from '../../components/Tooltip/styles';
 
 const Home: React.FC = () => {
@@ -80,7 +79,6 @@ const Home: React.FC = () => {
 
           <CardContainer>
             <CardFront>
-              {/* <img src={responsive} /> */}
               <RiComputerLine size={64} />
               <p>Design Responsivo</p>
             </CardFront>
@@ -130,7 +128,10 @@ const Home: React.FC = () => {
           </Tooltip>
           <Tooltip position="" language="RTL: " text={RTL}>
             <TooltipTarget>
-              <img src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67" />
+              <img
+                src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67"
+                alt="RTL"
+              />
             </TooltipTarget>
           </Tooltip>
           <Tooltip position="" language="Git: " text={GIT}>

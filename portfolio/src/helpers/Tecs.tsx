@@ -24,3 +24,6 @@ export const GIT =
 
 export const TYPESCRIPT =
   'É um superset da linguagem JavaScript, permite a escrita de scripts com a utilização de tipagem estática, orientação a objetos, e facilitando a escrita de código com uma sintaxe de fácil compreensão';
+
+export const MUI =
+  'O MUI fornece uma biblioteca robusta, personalizável e acessível de componentes básicos e avançados, permitindo a construção do seu próprio sistema de design e desenvolvimento de aplicativos React com mais rapidez.';

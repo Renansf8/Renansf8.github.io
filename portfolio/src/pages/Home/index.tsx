@@ -12,6 +12,7 @@ import {
   SiJest,
   SiGit,
   SiTypescript,
+  SiMaterialUi,
 } from 'react-icons/si';
 import {
   HTML,
@@ -23,6 +24,7 @@ import {
   RTL,
   GIT,
   TYPESCRIPT,
+  MUI,
 } from '../../helpers/Tecs';
 
 import {
@@ -137,6 +139,11 @@ const Home: React.FC = () => {
           <Tooltip position="" language="Git: " text={GIT}>
             <TooltipTarget>
               <SiGit size={48} color="orange" />
+            </TooltipTarget>
+          </Tooltip>
+          <Tooltip position="" language="Material UI: " text={MUI}>
+            <TooltipTarget>
+              <SiMaterialUi size={48} color="blue" />
             </TooltipTarget>
           </Tooltip>
         </div>

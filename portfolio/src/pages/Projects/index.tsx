@@ -3,7 +3,13 @@ import { projectList } from '../../helpers/Project';
 import Footer from '../../components/Footer';
 
 import { ImHtmlFive, ImCss3 } from 'react-icons/im';
-import { SiJavascript, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
+import {
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiTypescript,
+  SiMaterialUi,
+} from 'react-icons/si';
 
 import { Header, ProjectsList, ProjectCard, Tecs } from './styles';
 
@@ -113,6 +119,7 @@ const Projects: React.FC = () => {
               <ImCss3 color="blue" size={24} />
               <SiJavascript color="#dbce00" size={24} />
               <SiReact color="cyan" size={24} />
+              <SiMaterialUi color="blue" size={24} />
             </div>
           </Tecs>
           <img src={trivia.thumb} alt="Git Colletion project" />

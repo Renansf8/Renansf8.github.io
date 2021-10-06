@@ -2,6 +2,7 @@ import uploadImg from '../assets/uploadproject.png';
 import trybewalletImg from '../assets/trybewallet.png';
 import todoImg from '../assets/todo-list.png';
 import gitCollectionImg from '../assets/gitCollection.png';
+import trivia from '../assets/trivia.png';
 
 export const projectList = {
   toDo: {
@@ -26,5 +27,10 @@ export const projectList = {
     title: 'Git Collection',
     description: 'Um app para explorar os repositório existentes do github',
     thumb: gitCollectionImg,
+  },
+  trivia: {
+    title: 'Trivia',
+    description: 'Um app para responder perguntas de conhecimentos gerais.',
+    thumb: trivia,
   },
 };

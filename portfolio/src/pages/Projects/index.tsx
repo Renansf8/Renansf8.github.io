@@ -8,7 +8,7 @@ import { SiJavascript, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 import { Header, ProjectsList, ProjectCard, Tecs } from './styles';
 
 const Projects: React.FC = () => {
-  const { toDo, trybeWallet, gitCollection } = projectList;
+  const { toDo, trybeWallet, gitCollection, trivia } = projectList;
 
   return (
     <>
@@ -99,6 +99,28 @@ const Projects: React.FC = () => {
               target="_blank"
               rel="noreferrer"
             >
+              <button>Ir para o site</button>
+            </a>
+          </div>
+        </ProjectCard>
+        <ProjectCard>
+          <h3>{trivia.title}</h3>
+          <p>{trivia.description}</p>
+          <Tecs>
+            <p>Tecnologias utilizadas:</p>
+            <div>
+              <ImHtmlFive color="#e65200" size={24} />
+              <ImCss3 color="blue" size={24} />
+              <SiJavascript color="#dbce00" size={24} />
+              <SiReact color="cyan" size={24} />
+            </div>
+          </Tecs>
+          <img src={trivia.thumb} alt="Git Colletion project" />
+          <div>
+            <a href="https://github.com/Renansf8/trivia" target="_blank" rel="noreferrer">
+              <button>Ir para o repositório</button>
+            </a>
+            <a href="https://trivia-gold.vercel.app/" target="_blank" rel="noreferrer">
               <button>Ir para o site</button>
             </a>
           </div>

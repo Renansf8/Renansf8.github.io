@@ -4,7 +4,7 @@ import { Footer } from './styles';
 const FooterComponent: React.FC = () => {
   return (
     <Footer>
-      Feito com Typescript, React, RTL e Styled Components por
+      Feito com Typescript, React e Styled Components por
       <strong>Renan Ferreira</strong>
     </Footer>
   );

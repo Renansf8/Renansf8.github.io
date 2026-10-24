@@ -5,6 +5,8 @@ Portfólio pessoal em React + Vite, com deploy automático no GitHub Pages.
 ## Editar o conteúdo
 
 Todo o conteúdo fica em **`src/data/portfolio.js`**: perfil, experiências, projetos e stack.
+O site é bilíngue (PT/EN): textos traduzíveis usam `{ pt: '...', en: '...' }`, e textos iguais nos dois idiomas podem ser uma string simples. Os textos da interface (botões, títulos) ficam em `src/i18n.jsx`.
+
 Fotos, imagens de projetos e currículo (PDF) vão na pasta `public/` e são referenciados como `./arquivo.ext`.
 
 ## Rodar localmente
@@ -34,6 +36,7 @@ A cada `push` na `main`, o workflow em `.github/workflows/deploy.yml` faz o buil
 ## Recursos
 
 - Paleta de comandos (`⌘K` / `Ctrl+K`) para navegar, abrir projetos e copiar o e-mail
+- Português e inglês (detecta o idioma do navegador e lembra a escolha)
 - Tema claro/escuro (lembra a escolha do visitante)
 - Filtro de projetos por tecnologia
 - Experiências em acordeão

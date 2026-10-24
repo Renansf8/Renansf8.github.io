@@ -1,28 +1,30 @@
 import { profile, stack } from '../data/portfolio.js'
 import { useClock } from '../hooks.js'
 import { scrollToSection } from '../sections.js'
+import { useLang } from '../i18n.jsx'
 
 export default function Hero() {
-  const time = useClock(profile.timezone)
+  const { t, s } = useLang()
+  const time = useClock(profile.timezone, s.locale)
   const words = profile.name.split(' ')
-  const marquee = stack.flatMap((g) => g.items)
+  const marquee = stack.flatMap((g) => g.items.map(t))
 
   return (
     <section id="inicio" className="hero">
       <div className="hero-meta">
         <div className="meta-item load" style={{ '--d': '100ms' }}>
-          <span className="meta-k">Baseado em</span>
-          <span className="meta-v">{profile.location}</span>
+          <span className="meta-k">{s.basedIn}</span>
+          <span className="meta-v">{t(profile.location)}</span>
         </div>
         <div className="meta-item load" style={{ '--d': '180ms' }}>
-          <span className="meta-k">Hora local</span>
+          <span className="meta-k">{s.localTime}</span>
           <span className="meta-v mono">{time}</span>
         </div>
         <div className="meta-item load" style={{ '--d': '260ms' }}>
-          <span className="meta-k">Status</span>
+          <span className="meta-k">{s.status}</span>
           <span className="meta-v">
             <i className={`pulse ${profile.available ? '' : 'off'}`} />
-            {profile.availabilityText}
+            {t(profile.availabilityText)}
           </span>
         </div>
       </div>
@@ -40,16 +42,16 @@ export default function Hero() {
 
       <div className="hero-bottom">
         <p className="hero-role load" style={{ '--d': '650ms' }}>
-          <span className="mono accent">→</span> {profile.role}
+          <span className="mono accent">→</span> {t(profile.role)}
         </p>
-        <p className="hero-tagline load" style={{ '--d': '750ms' }}>{profile.tagline}</p>
+        <p className="hero-tagline load" style={{ '--d': '750ms' }}>{t(profile.tagline)}</p>
         <div className="hero-cta load" style={{ '--d': '850ms' }}>
           <button className="link-arrow" onClick={() => scrollToSection('projetos')}>
-            Ver projetos <span>↓</span>
+            {s.viewProjects} <span>↓</span>
           </button>
           {profile.resumeUrl && (
-            <a className="link-arrow muted" href={profile.resumeUrl} target="_blank" rel="noreferrer">
-              Currículo <span>↗</span>
+            <a className="link-arrow muted" href={t(profile.resumeUrl)} target="_blank" rel="noreferrer">
+              {s.resume} <span>↗</span>
             </a>
           )}
         </div>
@@ -57,9 +59,9 @@ export default function Hero() {
 
       <div className="marquee load" style={{ '--d': '950ms' }} aria-hidden="true">
         <div className="marquee-track">
-          {[...marquee, ...marquee].map((t, i) => (
+          {[...marquee, ...marquee].map((item, i) => (
             <span key={i}>
-              {t} <i>✦</i>
+              {item} <i>✦</i>
             </span>
           ))}
         </div>

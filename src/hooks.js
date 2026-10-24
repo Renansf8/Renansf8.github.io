@@ -33,14 +33,15 @@ export function useTheme() {
   return [theme, () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))]
 }
 
-export function useClock(timeZone) {
+export function useClock(timeZone, locale = 'pt-BR') {
   const fmt = () =>
-    new Intl.DateTimeFormat('pt-BR', { timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date())
+    new Intl.DateTimeFormat(locale, { timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date())
   const [time, setTime] = useState(fmt)
   useEffect(() => {
+    setTime(fmt())
     const t = setInterval(() => setTime(fmt()), 1000)
     return () => clearInterval(t)
-  }, [timeZone])
+  }, [timeZone, locale])
   return time
 }
 

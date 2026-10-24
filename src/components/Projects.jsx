@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { projects } from '../data/portfolio.js'
+import { useLang } from '../i18n.jsx'
 import Reveal from './Reveal.jsx'
 import SectionHeader from './SectionHeader.jsx'
 
@@ -72,24 +73,27 @@ function ProjectCover({ project }) {
   return <Cover title={project.title} />
 }
 
+const ALL = '*'
+
 export default function Projects() {
-  const tags = useMemo(() => ['Todos', ...new Set(projects.flatMap((p) => p.tags))], [])
-  const [filter, setFilter] = useState('Todos')
-  const list = filter === 'Todos' ? projects : projects.filter((p) => p.tags.includes(filter))
+  const { t, s } = useLang()
+  const tags = useMemo(() => [ALL, ...new Set(projects.flatMap((p) => p.tags))], [])
+  const [filter, setFilter] = useState(ALL)
+  const list = filter === ALL ? projects : projects.filter((p) => p.tags.includes(filter))
 
   return (
     <section id="projetos" className="section">
-      <SectionHeader index={3} title="Projetos" aside={`${list.length} de ${projects.length}`} />
-      <Reveal className="filters" role="tablist" aria-label="Filtrar por tecnologia">
-        {tags.map((t) => (
+      <SectionHeader index={3} title={s.sections.projetos} aside={s.count(list.length, projects.length)} />
+      <Reveal className="filters" role="tablist" aria-label={s.filterBy}>
+        {tags.map((tag) => (
           <button
-            key={t}
+            key={tag}
             role="tab"
-            aria-selected={filter === t}
-            className={`chip ${filter === t ? 'active' : ''}`}
-            onClick={() => setFilter(t)}
+            aria-selected={filter === tag}
+            className={`chip ${filter === tag ? 'active' : ''}`}
+            onClick={() => setFilter(tag)}
           >
-            {t}
+            {tag === ALL ? s.all : tag}
           </button>
         ))}
       </Reveal>
@@ -101,11 +105,11 @@ export default function Projects() {
               as="article"
               key={p.title}
               delay={(i % 2) * 90}
-              className={`project ${p.featured && filter === 'Todos' ? 'featured' : ''}`}
+              className={`project ${p.featured && filter === ALL ? 'featured' : ''}`}
             >
               <a className="project-cover" href={href || undefined} target="_blank" rel="noreferrer" tabIndex={-1} aria-hidden="true">
                 <ProjectCover project={p} />
-                {p.featured && <span className="badge mono">Destaque</span>}
+                {p.featured && <span className="badge mono">{s.featured}</span>}
               </a>
               <div className="project-info">
                 <div className="project-top">
@@ -114,14 +118,14 @@ export default function Projects() {
                   </h3>
                   <span className="mono muted">{p.year}</span>
                 </div>
-                <p>{p.description}</p>
+                <p>{t(p.description)}</p>
                 <div className="project-bottom">
                   <div className="tags">
-                    {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                    {p.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
                   </div>
                   <div className="project-links mono">
-                    {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">Código ↗</a>}
-                    {p.live && <a href={p.live} target="_blank" rel="noreferrer">Online ↗</a>}
+                    {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">{s.code} ↗</a>}
+                    {p.live && <a href={p.live} target="_blank" rel="noreferrer">{s.live} ↗</a>}
                   </div>
                 </div>
               </div>

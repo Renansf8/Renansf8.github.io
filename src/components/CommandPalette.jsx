@@ -1,31 +1,35 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { SECTIONS, scrollToSection } from '../sections.js'
 import { profile, projects } from '../data/portfolio.js'
+import { useLang } from '../i18n.jsx'
 
 export default function CommandPalette({ open, onClose, onToggleTheme }) {
   const [query, setQuery] = useState('')
   const [index, setIndex] = useState(0)
   const inputRef = useRef(null)
+  const { t, s, toggleLang } = useLang()
+  const p = s.palette
 
   const commands = useMemo(() => {
     const list = [
-      ...SECTIONS.map((s) => ({ group: 'Navegar', label: s.label, run: () => scrollToSection(s.id) })),
-      ...projects.filter((p) => p.live || p.repo).map((p) => ({
-        group: 'Projetos',
-        label: p.title,
-        hint: p.tags.join(' · '),
-        run: () => window.open(p.live || p.repo, '_blank', 'noreferrer'),
+      ...SECTIONS.map((id) => ({ group: p.navigate, label: s.sections[id], run: () => scrollToSection(id) })),
+      ...projects.filter((pr) => pr.live || pr.repo).map((pr) => ({
+        group: p.projects,
+        label: pr.title,
+        hint: pr.tags.join(' · '),
+        run: () => window.open(pr.live || pr.repo, '_blank', 'noreferrer'),
       })),
-      { group: 'Ações', label: 'Copiar e-mail', hint: profile.email, run: () => navigator.clipboard?.writeText(profile.email) },
-      { group: 'Ações', label: 'Alternar tema claro/escuro', run: onToggleTheme },
-      ...(profile.resumeUrl ? [{ group: 'Ações', label: 'Abrir currículo', run: () => window.open(profile.resumeUrl, '_blank') }] : []),
-      ...profile.socials.filter((s) => s.url).map((s) => ({
-        group: 'Redes', label: s.label, hint: s.url.replace(/^https?:\/\//, ''), run: () => window.open(s.url, '_blank', 'noreferrer'),
+      { group: p.actions, label: s.switchLang, hint: 'PT / EN', run: toggleLang },
+      { group: p.actions, label: s.copyEmail, hint: profile.email, run: () => navigator.clipboard?.writeText(profile.email) },
+      { group: p.actions, label: p.themeToggle, run: onToggleTheme },
+      ...(profile.resumeUrl ? [{ group: p.actions, label: p.openResume, run: () => window.open(t(profile.resumeUrl), '_blank') }] : []),
+      ...profile.socials.filter((so) => so.url).map((so) => ({
+        group: p.social, label: so.label, hint: so.url.replace(/^https?:\/\//, ''), run: () => window.open(so.url, '_blank', 'noreferrer'),
       })),
     ]
     const q = query.trim().toLowerCase()
     return q ? list.filter((c) => `${c.label} ${c.hint || ''} ${c.group}`.toLowerCase().includes(q)) : list
-  }, [query, onToggleTheme])
+  }, [query, onToggleTheme, toggleLang, s, p, t])
 
   useEffect(() => {
     if (open) {
@@ -61,7 +65,7 @@ export default function CommandPalette({ open, onClose, onToggleTheme }) {
   let lastGroup = null
   return (
     <div className="palette-backdrop" onMouseDown={onClose}>
-      <div className="palette" role="dialog" aria-modal="true" aria-label="Menu de comandos" onMouseDown={(e) => e.stopPropagation()}>
+      <div className="palette" role="dialog" aria-modal="true" aria-label={p.dialog} onMouseDown={(e) => e.stopPropagation()}>
         <div className="palette-input">
           <span className="mono accent">›</span>
           <input
@@ -69,13 +73,13 @@ export default function CommandPalette({ open, onClose, onToggleTheme }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={onKeyDown}
-            placeholder="Para onde você quer ir?"
-            aria-label="Buscar comando"
+            placeholder={p.placeholder}
+            aria-label={p.search}
           />
           <kbd>esc</kbd>
         </div>
         <ul className="palette-list">
-          {commands.length === 0 && <li className="palette-empty">Nada encontrado.</li>}
+          {commands.length === 0 && <li className="palette-empty">{p.empty}</li>}
           {commands.map((c, i) => {
             const header = c.group !== lastGroup ? c.group : null
             lastGroup = c.group

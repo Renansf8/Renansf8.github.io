@@ -9,14 +9,19 @@ import Contact from './components/Contact.jsx'
 import CommandPalette from './components/CommandPalette.jsx'
 import { useTheme } from './hooks.js'
 import { profile } from './data/portfolio.js'
+import { useLang } from './i18n.jsx'
 
 export default function App() {
   const [theme, toggleTheme] = useTheme()
   const [paletteOpen, setPaletteOpen] = useState(false)
   const closePalette = useCallback(() => setPaletteOpen(false), [])
+  const { t } = useLang()
 
   useEffect(() => {
-    document.title = `${profile.name} — ${profile.role}`
+    document.title = `${profile.name} — ${t(profile.role)}`
+  }, [t])
+
+  useEffect(() => {
     const onKey = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault()

@@ -782,3 +782,26 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
   .reveal, .load, .line-inner { opacity: 1; transform: none; }
   .grain { animation: none; }
 }
+
+/* Language toggle */
+.lang-btn {
+  display: flex;
+  height: 34px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  transition: border-color 0.25s;
+}
+.lang-btn:hover { border-color: var(--muted); }
+.lang-btn span {
+  display: grid;
+  place-items: center;
+  padding: 0 9px;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.lang-btn span.on { background: var(--fg); color: var(--bg); }

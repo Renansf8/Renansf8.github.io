@@ -207,7 +207,6 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
   color: var(--muted);
 }
 .meta-v { font-size: 15px; display: flex; align-items: center; gap: 8px; }
-.meta-v.mono { font-size: 15px; font-variant-numeric: tabular-nums; }
 .pulse {
   width: 8px; height: 8px;
   border-radius: 50%;
@@ -760,8 +759,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
   .kbd-btn { padding: 6px 14px; }
   .kbd-label { margin: 0; }
   .hero { padding-top: 96px; }
-  .hero-meta { grid-template-columns: 1fr 1fr; gap: 20px 24px; }
-  .hero-meta .meta-item:last-child { grid-column: 1 / -1; }
+  .hero-meta { grid-template-columns: 1fr; gap: 16px; }
   .hero-name .line:nth-child(2) { padding-left: 0; }
   .section-header { flex-wrap: wrap; gap: 12px; }
   .section-aside { margin-left: 0; width: 100%; }

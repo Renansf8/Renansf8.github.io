@@ -16,7 +16,6 @@ export const profile = {
     en: 'I scale high-traffic web and mobile platforms — from architecture to production, with a focus on performance, SEO, testing and AI.',
   },
   location: { pt: 'Belém, Pará — Brasil', en: 'Belém, Pará — Brazil' },
-  timezone: 'America/Belem', // usado no relógio ao vivo
   available: true,
   availabilityText: { pt: 'Aberto a novas oportunidades', en: 'Open to new opportunities' },
   email: 'renansferreira8@gmail.com',

@@ -1,11 +1,9 @@
 import { profile, stack } from '../data/portfolio.js'
-import { useClock } from '../hooks.js'
 import { scrollToSection } from '../sections.js'
 import { useLang } from '../i18n.jsx'
 
 export default function Hero() {
   const { t, s } = useLang()
-  const time = useClock(profile.timezone, s.locale)
   const words = profile.name.split(' ')
   const marquee = stack.flatMap((g) => g.items.map(t))
 
@@ -17,10 +15,6 @@ export default function Hero() {
           <span className="meta-v">{t(profile.location)}</span>
         </div>
         <div className="meta-item load" style={{ '--d': '180ms' }}>
-          <span className="meta-k">{s.localTime}</span>
-          <span className="meta-v mono">{time}</span>
-        </div>
-        <div className="meta-item load" style={{ '--d': '260ms' }}>
           <span className="meta-k">{s.status}</span>
           <span className="meta-v">
             <i className={`pulse ${profile.available ? '' : 'off'}`} />

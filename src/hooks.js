@@ -33,18 +33,6 @@ export function useTheme() {
   return [theme, () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))]
 }
 
-export function useClock(timeZone, locale = 'pt-BR') {
-  const fmt = () =>
-    new Intl.DateTimeFormat(locale, { timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date())
-  const [time, setTime] = useState(fmt)
-  useEffect(() => {
-    setTime(fmt())
-    const t = setInterval(() => setTime(fmt()), 1000)
-    return () => clearInterval(t)
-  }, [timeZone, locale])
-  return time
-}
-
 export function useScrollProgress() {
   const [p, setP] = useState(0)
   useEffect(() => {
